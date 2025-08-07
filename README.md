@@ -5,7 +5,7 @@
 - npm install axios
 - npm install react-router-dom
 - npm install
-# native - 한글 폴더 지원 안 됨
+# native - 한글 폴더 지원 안 됨 - 플레이스토어에서 EXPO GO 설치
 - cd frontend-native
 - npm install
 - npx expo install @react-navigation/native

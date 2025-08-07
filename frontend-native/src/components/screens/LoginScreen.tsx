@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
+import { KakaoButton, LoginButton, SignupButton } from '../CustomButton';
 
 export default function LoginScreen() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [loginMessage, setLoginMessage] = useState('')
 
   const handleLogin = () => {
     console.log('로그인 시도:', email, password);
@@ -12,7 +14,7 @@ export default function LoginScreen() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>로그인</Text>
+      <Text style={styles.logo}>Team Heart Of Guro</Text>
       <TextInput
         placeholder="이메일"
         value={email}
@@ -21,32 +23,42 @@ export default function LoginScreen() {
       />
       <TextInput
         placeholder="비밀번호"
-        secureTextEntry
         value={password}
         onChangeText={setPassword}
+        secureTextEntry
         style={styles.input}
       />
-      <Button title="로그인" onPress={handleLogin} />
+      <LoginButton onPress={handleLogin} />
+      <SignupButton onPress={() => setLoginMessage('회원가입은 아직입니다.')} />
+      <KakaoButton onPress={() => setLoginMessage('카카오 로그인은 나중에~')} />
+      <Text style={styles.message}>{loginMessage}</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     padding: 24,
     justifyContent: 'center',
-    flex: 1,
+  },
+  logo: {
+    fontSize: 28,
+    fontWeight: 'bold',
+    marginBottom: 24,
+    textAlign: 'center',
   },
   input: {
     borderWidth: 1,
     borderColor: '#ccc',
-    marginBottom: 12,
-    padding: 10,
     borderRadius: 6,
+    padding: 12,
+    marginBottom: 12,
   },
-  title: {
-    fontSize: 24,
-    marginBottom: 20,
+  message: {
+    marginTop: 20,
     textAlign: 'center',
+    fontSize: 16,
+    color: 'blue',
   },
 });
