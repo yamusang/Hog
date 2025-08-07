@@ -6,6 +6,7 @@ import SignUpScreen from './src/components/screens/SignUpScreen';
 const Stack = createNativeStackNavigator();
 
 export default function App() {
+  
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Login">
