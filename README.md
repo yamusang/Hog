@@ -1,10 +1,12 @@
 # Hog
 ## install
 # react
+- cd frontend-react
 - npm install axios
 - npm install react-router-dom
 - npm install
-# native
+# native - 한글 폴더 지원 안 됨
+- cd frontend-native
 - npm install
 - npx expo install @react-navigation/native
 - npx expo install react-native-screens react-native-safe-area-context
