@@ -13,7 +13,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @RequestMapping("/api/posts")
 public class PostController {
-W
+
     private final PostService postService;
 
     // 게시글 작성
@@ -23,7 +23,8 @@ W
         User mockUser = new User();  // 임시 User 객체
         mockUser.setEmail("junwoo@example.com");  // 더미 데이터
         postService.createPost(requestDto, mockUser);
-    }W
+    }
+    
 
     // 게시글 전체 조회
     @GetMapping
