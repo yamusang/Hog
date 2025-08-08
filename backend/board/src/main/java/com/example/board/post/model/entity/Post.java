@@ -2,6 +2,8 @@ package com.example.board.post.model.entity;
 
 import java.time.LocalDateTime;
 
+import com.example.board.user.model.entity.User;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -45,7 +47,6 @@ public class Post {
     protected void onCreate() {
         this.createdAt = LocalDateTime.now(); // 현재 시간 값
     }
-
 }
 /*
  * fetch = LAZY: 성능을 위해 처음엔 User를 가져오지 않고, 나중에 접근할 때 가져옴
