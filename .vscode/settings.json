@@ -1,4 +1,7 @@
 {
+<<<<<<< HEAD
     "java.configuration.updateBuildConfiguration": "interactive",
+=======
+>>>>>>> 75d5771 (?)
     "java.compile.nullAnalysis.mode": "automatic"
 }

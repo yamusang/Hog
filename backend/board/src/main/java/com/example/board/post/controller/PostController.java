@@ -24,7 +24,10 @@ public class PostController {
         mockUser.setEmail("junwoo@example.com");  // 더미 데이터
         postService.createPost(requestDto, mockUser);
     }
+<<<<<<< HEAD
     
+=======
+>>>>>>> 75d5771 (?)
 
     // 게시글 전체 조회
     @GetMapping
